@@ -1,0 +1,32 @@
+.jumbotron {
+  padding: 0;
+  height: 47vh;
+  overflow: auto;
+}
+
+h1 {
+  color: #023C5B;
+  text-align: center;
+  margin-top: 0;
+}
+
+table {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding-left: 10px;
+}
+
+table#t01 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t01 tr:nth-child(odd) {
+    background-color: #fff;
+}
+table#t01 th {
+    color: white;
+    background-color: #023C5B;
+}

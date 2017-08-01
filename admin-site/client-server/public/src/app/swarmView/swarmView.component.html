@@ -1,0 +1,59 @@
+<h1>Swarm View</h1>
+<hr>
+<div>
+
+  <!-- Docker Swarm Nodes -->
+
+  <!-- List title -->
+  <div class=row style="width: 90%; margin-left: auto; margin-right: auto;">
+    <div class="col-sm-4" style="padding-left: 0; text-align: center">
+      <h2>Docker Swarm Nodes</h2>
+    </div>
+  </div>
+
+  <!-- Row: List and Node Summary -->
+  <div class=row style="width: 90%; margin-left: auto; margin-right: auto;">
+    <!-- List of Nodes -->
+    <div class="col-sm-4" style="padding-left: 0">
+      <!-- check if node list populated -->
+      <div *ngIf="nodeList.length > 0">
+        <ul class="node-list">
+          <!-- Add list item for every node -->
+          <li class="list-group-item"
+                *ngFor="let node of nodeList"
+                (click)="selectNode(node)"
+                [class.active]="node === selectedNode">
+                {{ node }}<br>
+                Number of Containers: xxxx <br>
+                Total Views: xxxx
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- put space between two componets -->
+    <div class="col-sm-1">
+    </div>
+
+    <!-- Display Node -->
+    <!-- Jumbotron Column -->
+      <div class="col-sm-6">
+        <div class="jumbotron" *ngIf="!selectedNode">
+            <span class="glyphicon glyphicon-hand-left"></span>
+            <h1>{{ greeting }}</h1>
+            <p> {{ message }} </p>
+        </div>
+
+        <!-- PASSING INFO TO ANOTHER COMPONENT -->
+        <!-- Call the user-profile component and pass active user-->
+      <node-summary  [node]="selectedNode"></node-summary>
+      </div>
+</div>
+
+<!--
+<li class="node" *ngFor="let node of nodeList" (click)="selectNode(node)" [class.active]="node === selectedNode">
+      <p>{{ node }}<p>
+      containers views
+</li>
+
+-->

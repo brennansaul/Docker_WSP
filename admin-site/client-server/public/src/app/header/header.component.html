@@ -1,0 +1,33 @@
+<!--
+* File:        header.component.html
+* Author:      Brennan Saul
+* Description: HTML for header.component.ts
+* Edit history:
+*
+* Editor   Date		  Description
+* ======   ========	===========
+* Saul     7/31/17   File Created
+-->
+<div class="outer">
+<div id="header">
+  <img id="logo" src="assets/images/FlairWhite.png">
+  <div class="header-rt">
+    World's Smartest Paperweight: Docker
+  </div>
+
+</div>
+
+<div id="navbar">
+ <ul class="nav-list">
+   <li routerLinkActive="active"
+   [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Swarm</a></li>
+   <li routerLinkActive="active"
+   [routerLinkActiveOptions]="{exact: true}"><a routerLink="/skills">Statistics</a></li>
+   <li routerLinkActive="active"
+   [routerLinkActiveOptions]="{exact: true}"><a routerLink="/experiences">Terminal</a></li>
+   <li routerLinkActive="active"
+   [routerLinkActiveOptions]="{exact: true}"><a routerLink="/projects">About</a></li>
+ </ul>
+</div>
+
+</div>

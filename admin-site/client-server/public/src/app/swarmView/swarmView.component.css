@@ -1,0 +1,33 @@
+.node-list {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Item in nav list */
+li.list-group-item{
+  margin-bottom: 2px;
+}
+
+.jumbotron {
+  text-align: center;
+  font-size: 80px;
+  height: 100%;
+  height: 47vh;
+}
+
+.active{
+  background-color: #023C5B;
+}
+
+.hover {
+  background-color: #023C5B;
+}
+
+h1 {
+  color: #023C5B;
+}
+
+h2 {
+  color: #023C5B;
+}

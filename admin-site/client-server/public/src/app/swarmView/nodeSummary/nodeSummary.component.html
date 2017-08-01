@@ -1,0 +1,20 @@
+<!-- Display component if node has value -->
+<div class="jumbotron" *ngIf="node">
+    <h1>{{ node }}</h1>
+    <table id="t01" style="width:80%">
+      <caption>Containers & Views</caption>
+        <!-- Column Lables -->
+        <tr>
+          <th>Container ID</th>
+          <th>Views</th>
+        </tr>
+
+        <!-- Containers and views -->
+        <tr *ngFor="let container of containerList" >
+          <td>{{ container.cid }}</td>
+          <td>{{ container.views }}</td>
+        </tr>
+
+      </table>
+      <p> {{ message }} </p>
+</div>
