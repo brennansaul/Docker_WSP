@@ -12,7 +12,7 @@ services:
     depends_on:
       - database
     command: ["./wait-for-it.sh", "database:27017", "--strict", "--", "./wait-for-mongo.sh"]
-    
+
   database: # name of the third service
     image: mongo # specify image to build container from
     ports:

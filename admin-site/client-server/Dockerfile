@@ -31,4 +31,4 @@ ENV PASSWORD="admin"
 EXPOSE 4200
 EXPOSE 80
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/public

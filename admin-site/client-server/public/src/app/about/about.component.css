@@ -1,0 +1,14 @@
+
+#about {
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+  /*
+  height: 400px;
+  overflow: auto;
+  */
+}
+
+h1, h4 {
+  color: #023C5B;
+}

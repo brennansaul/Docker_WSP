@@ -24,7 +24,7 @@ export class NodeSummaryComponent {
 
   @Input() node: string;
 
-  containerList :Container[];
+  containerList :Container[]  = [];
   // For Testing and Development
   allContainers :Container[] = [
     { cid: "1111111111", views: 0, node: "pi-manager" },

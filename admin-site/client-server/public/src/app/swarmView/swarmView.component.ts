@@ -11,8 +11,13 @@
 */
 
 import { Component } from "@angular/core";
+import { Http } from '@angular/http';
 
 import { Container } from '../shared/models/container'
+
+// Import rxjs map operator
+import 'rxjs/add/operator/map';
+
 
 @Component({
   selector: 'swarm-view',
@@ -35,7 +40,7 @@ export class SwarmViewComponent {
     "pi-worker3",
   ]
 
-  List :Container[];
+  allContainers :Container[];
 
   // For Testing and Development
   containerList :Container[] = [
@@ -72,6 +77,42 @@ export class SwarmViewComponent {
 		console.log(this.selectedNode);
 	}
 
-  
+  // Link to our api, pointing to localhost
+  API = 'http://localhost:3000'
+
+
+  // Declare empty list of people
+  containers: any[] = [];
+
+  constructor(private http: Http) {}
+
+  // Angular 2 Life Cycle event when component has been initialized
+  ngOnInit() {
+    this.getAllContainers();
+  }
+
+  // Add one Container to the API
+  /*
+  addContainer(name, age) {
+    this.http.post(`${this.API}/containers`, {cid, views, node})
+      .map(res => res.json())
+      .subscribe(() => {
+        this.getAllContainers();
+      })
+  }
+  */
+
+  // Get all users from the API
+  getAllContainers() {
+    this.http.get(`${this.API}/containers`)
+      .map(res => res.json())
+      .subscribe(containers => {
+        console.log(containers)
+        this.containers = containers
+      })
+  }
+
+
+
 
 }

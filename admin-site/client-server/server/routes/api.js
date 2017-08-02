@@ -9,9 +9,10 @@ const dbHost = 'mongodb://database/admin-site';
 mongoose.connect(dbHost);
 
 // create mongoose schema
-const userSchema = new mongoose.Schema({
+const ContainerSchema = new mongoose.Schema({
   cid: String,
-  views: Number
+  views: Number,
+  node: String
 });
 
 // create mongoose model
@@ -23,7 +24,7 @@ router.get('/', (req, res) => {
     res.send('api works');
 });
 
-/* GET all users. */
+/* GET all Containers. */
 router.get('/containers', (req, res) => {
     User.find({}, (err, containers) => {
         if (err) res.status(500).send(error)
@@ -32,7 +33,7 @@ router.get('/containers', (req, res) => {
     });
 });
 
-/* GET one users. */
+/* GET one Container. */
 router.get('/containers/:id', (req, res) => {
     User.findById(req.param.id, (err, containers) => {
         if (err) res.status(500).send(error)
@@ -41,11 +42,12 @@ router.get('/containers/:id', (req, res) => {
     });
 });
 
-/* Create a user. */
+/* Create a Container. */
 router.post('/containers', (req, res) => {
     let container = new Container({
         cid: req.body.cid,
         views: req.body.views
+        node: req.body.node
     });
 
     container.save(error => {
