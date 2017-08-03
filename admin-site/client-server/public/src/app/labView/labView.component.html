@@ -1,0 +1,22 @@
+
+
+<div class="row">
+  <!-- Labs -->
+  <div class="col-xs-6">
+    <!-- Lab selector buttons -->
+    <div class="btn-group">
+      <button *ngFor="let lab of labList" class="btn"
+          (click)="selectLab(lab[1])" [class.focus]="lab[1] === selectedLab">
+          {{ lab[0] }}
+      </button>
+    </div>
+    <div class="jumbotron">
+      <div markdown-to-html class="markdown" [src]="selectedLab"></div>
+    </div>
+  </div>
+
+  <!-- Terminal -->
+  <div class="col-xs-6">
+    <iframe class="term" src="https://localhost:8088/terminal/"></iframe>
+  </div>
+</div>

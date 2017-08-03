@@ -1,6 +1,6 @@
+/* Style for the entire node list area */
 .node-list {
   text-align: center;
-  margin: 0;
   padding: 0;
 }
 
@@ -9,6 +9,7 @@ li.list-group-item{
   margin-bottom: 2px;
 }
 
+/* Welcome and Inspect area */
 .jumbotron {
   text-align: center;
   font-size: 80px;
@@ -16,18 +17,23 @@ li.list-group-item{
   height: 47vh;
 }
 
-.active{
+/* Defines Active style */
+.active {
   background-color: #023C5B;
 }
 
+/* Define the hover style */
 .hover {
   background-color: #023C5B;
 }
 
-h1 {
+h1, h2 {
   color: #023C5B;
 }
 
-h2 {
-  color: #023C5B;
+/* Used to make the margin on the line smaller to fit
+   Elements onto an average screen, no scrolling required */
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

@@ -1,8 +1,19 @@
+<!-- If node does not have content dosplay Welcome message -->
+<div class="jumbotron" *ngIf="!node">
+  <div class="welcome">
+    <span class="glyphicon glyphicon-hand-left"></span>
+    <h1>{{ greeting }}</h1>
+    <p> {{ message }} </p>
+  </div>
+</div>
+
 <!-- Display component if node has value -->
 <div class="jumbotron" *ngIf="node">
+  <div class="node-summary">
     <h1>{{ node }}</h1>
     <table id="t01" style="width:80%">
       <caption>Containers & Views</caption>
+
         <!-- Column Lables -->
         <tr>
           <th>Container ID</th>
@@ -14,7 +25,6 @@
           <td>{{ container.cid }}</td>
           <td>{{ container.views }}</td>
         </tr>
-
       </table>
-      <p> {{ message }} </p>
+  </div>
 </div>

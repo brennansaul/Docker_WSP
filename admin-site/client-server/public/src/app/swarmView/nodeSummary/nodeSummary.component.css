@@ -1,7 +1,22 @@
-.jumbotron {
+/* Styling for area that contains greeting and node summary */
+
+/* Welcome and Inspect area */
+.welcome {
+  text-align: center;
+  font-size: 80px;
+  height: 50%;
+}
+
+/* Node Inspection & Summary Display */
+.node-summary {
   padding: 0;
-  height: 47vh;
+  height: 50%;
   overflow: auto;
+}
+
+/* Change glyphicon color */
+.glyphicon-hand-left {
+  color: #023C5B;
 }
 
 h1 {
@@ -9,6 +24,8 @@ h1 {
   text-align: center;
   margin-top: 0;
 }
+
+/* Styling for the table in the node summary */
 
 table {
   margin-right: auto;
@@ -23,9 +40,11 @@ table, th, td {
 table#t01 tr:nth-child(even) {
     background-color: #eee;
 }
+
 table#t01 tr:nth-child(odd) {
     background-color: #fff;
 }
+
 table#t01 th {
     color: white;
     background-color: #023C5B;

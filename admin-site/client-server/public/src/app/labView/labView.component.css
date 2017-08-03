@@ -1,0 +1,72 @@
+/* Split the page half and half between the terminal and the lab walk throughs */
+.row {
+  margin: 0 auto 0 auto;
+  width: 96%;
+  text-align: left;
+}
+
+.col-xs-6 {
+  width: 50%;
+}
+
+/* Style for terminal */
+.term {
+  margin-top: 5%;
+  width: 100%;
+  height: 60vh;
+}
+
+.btn-group {
+  margin-top: 3%;
+}
+
+.btn-group button {
+  color: white;
+  background-color: #023C5B
+}
+
+/* Change the link color to #111 (black) on hover */
+.btn-group button:hover {
+  background-color: #fff;
+  border: 3px solid #023C5B;
+  color: #023C5B;
+}
+
+/*
+button.btn:focus{
+  background-color: white;
+  border: 3px solid #023C5B;
+  color: #023C5B;
+}
+
+/* Defines Active style
+button.btn:active {
+  background-color: White;
+}*/
+
+
+.jumbotron {
+  text-align: left;
+  width: 100%;
+  height: 60vh;
+  padding-top: 0;
+  background-color: white;
+  border: 5px solid #eeeeee;
+  overflow: auto;
+}
+
+.markdown {
+  margin: 0 5% 5% 5%;
+  color: #023C5B;
+  background-color: white;
+  font-size: 15px;
+}
+
+.markdown hr {
+  color: red;
+}
+
+/* The following will style the elements produced by the mark down file
+.lab h1, h2, .lab h3, .lab h4 {
+  color: #023C5B;
+}*/
