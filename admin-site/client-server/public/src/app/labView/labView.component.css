@@ -11,16 +11,20 @@
 
 /* Style for terminal */
 .term {
-  margin-top: 5%;
+  margin-top: 45px;
   width: 100%;
   height: 60vh;
 }
 
 .btn-group {
-  margin-top: 3%;
+  
 }
 
 .btn-group button {
+  padding-top: 0;
+  font-size: 15px;
+  height: 25px;
+  margin-top: 20px;
   color: white;
   background-color: #023C5B
 }
@@ -28,7 +32,7 @@
 /* Change the link color to #111 (black) on hover */
 .btn-group button:hover {
   background-color: #fff;
-  border: 3px solid #023C5B;
+  border: 1px solid #023C5B;
   color: #023C5B;
 }
 
@@ -50,6 +54,7 @@ button.btn:active {
   width: 100%;
   height: 60vh;
   padding-top: 0;
+  margin: 0;
   background-color: white;
   border: 5px solid #eeeeee;
   overflow: auto;

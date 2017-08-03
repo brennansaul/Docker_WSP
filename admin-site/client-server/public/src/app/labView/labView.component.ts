@@ -20,8 +20,9 @@ import { Component, Input, OnInit} from "@angular/core";
 
 export class LabViewComponent {
   labList :String[][] = [
-    [ "lab1", "assets/docker-labs/lab1.md" ],
-    [ "lab2", "assets/docker-labs/lab2.md" ]
+    [ "Lab 1", "assets/docker-labs/lab1.md" ],
+    [ "Lab 2", "assets/docker-labs/lab2.md" ],
+    [ "Lab 3", "assets/docker-labs/lab3.md" ]
   ]
 
   selectedLab :String = "assets/docker-labs/lab1.md";
