@@ -11,14 +11,14 @@ This lab will introduce you to swarm mode. You will:
 
 ### What is Swarm Mode?
 Swarm mode is a feature for the Docker Engine that allows one to cluster
-multiple docker hosts. A Swarm is comprised of a set nodes that provide services. A node is a host
-with the docker engine that is participating in a swarm. There are two types
-of nodes there can be multiple of each type in a swarm. A `Manager node` has 2
+multiple docker hosts. A Swarm is comprised of a set of nodes that provide services. A node is a host
+that has the docker engine installed and is participating in a swarm. There are two types
+of nodes and there can be multiple of each type in a swarm. A `Manager node` has 2
 primary roles:
 - Delegator - The manager dispatches tasks to all nodes in the cluster
 - Maintainer - The manager monitors the status of all nodes and services
 
-If a service or node is down the manager will Delegate services and load balance
+If a service or node is down the manager will delegate services and load balance
 accordingly.The second type of Node in a swarm is a `Worker node`. A worker node
 receives tasks from the managers and hosts services in containers. A `Manager node`
 also works as a `Worker node`.
@@ -38,8 +38,8 @@ to watch this video by Elton Stoneman, a Docker Captain.
 <hr>
 
 ### Configuring a Swarm
-We already have a docker swarm configure so you should not execute the following commands,
-However, the configuration process is provided to show you how simple the process is!
+We already have a docker swarm configured so you should not execute the following commands.
+However, the configuration process is provided to show you how quick and simple it is!
 
 ##### *Note: Each node must be on the same subnet and must have the docker engine installed*
 
@@ -48,7 +48,7 @@ However, the configuration process is provided to show you how simple the proces
 ``` bash
 $ docker swarm init --advertise-addr <ip of host>
 
-# Expected Output format:
+# Expected Output Format:
 Swarm initialized: current node (dxn1zf6l61qsb1josjja83ngz) is now a manager.
 
 To add a worker to this swarm, run the following command:
