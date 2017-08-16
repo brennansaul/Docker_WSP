@@ -1,0 +1,4 @@
+flairhello:
+  image: brennansaul/falirhello
+  ports:
+    - "80:80"
