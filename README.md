@@ -20,7 +20,7 @@ development reference.
 
 ### Development Documentation
 Documentations takes two forms:
-- .docx file 
+- Docker-WSP-Documentation.docx
 - README.md files throughout this repository. 
 
 The README.md files are designed to provide setup information and guides for the component of the project 
