@@ -1,4 +1,4 @@
-# Docker_WSP
+# Docker WSP
 This repository contains all of the software developed for the **Docker World's Smartest Paperweight** project.
 The project architecture is composed of a stack of 4 Raspberry Pi's single board computers. These 4 Pis are clusted 
 using `Docker Swarm Mode`. The node cluster is composed of a manager node, `pi-manager`, and 3 worker nodes: 
