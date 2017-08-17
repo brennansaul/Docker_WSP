@@ -44,15 +44,25 @@ Docker image that when run creates a networking load balancer for all servers de
            server pi-worker1 <ip address>:2500 check # Docker node
            # Add more docker nodes here
            
-3. Start your Docker Swarm Service:
+3. Build HAProxy image
+         
+        $ cd <directory with files>
+        $ docker build -t swarm-haproxy .
+
+4. Test image
+
+	     $ docker run -it --rm --name haproxy-syntax-check pi-haproxy haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg
+           
+           
+5. Start your Docker Swarm Service:
         
         $ docker service create -p 2500:80 --replicas 4 --name <name> --mount type=bind,source=/etc/hostname,destination=/tmp/host-hostname,readonly=true <imagename>
        
-4. Start you HAProxy image **I am running this on a computer not the pi stack**
+6. Start you HAProxy image **I am running this on a computer not the pi stack**
 
         $ docker run -d -p 80:80 swarm-haproxy
 
-5. On the Machine running the HAProxy image go to http://0.0.0.0 refresh the page to show the different containers running the same service.
+7. On the Machine running the HAProxy image go to http://0.0.0.0 refresh the page to show the different containers running the same service.
 
 <hr>
 
