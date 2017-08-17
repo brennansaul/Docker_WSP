@@ -10,11 +10,12 @@ import { SwarmViewComponent } from './swarmView/swarmView.component'
 import { NodeSummaryComponent } from './swarmView/nodeSummary/nodeSummary.component'
 import { AboutComponent } from './about/about.component'
 import { LabViewComponent } from './labView/labView.component'
+import { VisualizerComponent } from './visualizer/visualizer.component'
 
 // Routes
 const appRoutes: Routes = [
   { path: '', component: SwarmViewComponent },
-  //{ path: 'skills', component: SkillsComponent },
+  { path: 'visualizer', component: VisualizerComponent },
   { path: 'labs', component: LabViewComponent },
   { path: 'about', component: AboutComponent },
   //{ path: 'resume', component: ResumeComponent}
@@ -27,7 +28,8 @@ const appRoutes: Routes = [
     SwarmViewComponent,
     NodeSummaryComponent,
     AboutComponent,
-    LabViewComponent
+    LabViewComponent,
+    VisualizerComponent
   ],
   imports: [
     BrowserModule,
