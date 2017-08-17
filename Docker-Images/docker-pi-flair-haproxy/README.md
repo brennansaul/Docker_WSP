@@ -50,7 +50,7 @@ Docker image that when run creates a networking load balancer for all servers de
 3. Build HAProxy image
          
         $ cd <directory with files>
-        $ docker build -t haproxy .
+        $ docker build -t swarm-haproxy .
 
 4. Test image
 
@@ -58,7 +58,7 @@ Docker image that when run creates a networking load balancer for all servers de
            
 5. Start your Docker Swarm Service:
 
-        $ docker service create -p 8080:80 --name helloworld --replicas 10 <image name>
+        $ docker service create -p 2500:80 --name flairdatasystems --replicas 10 --mount type=bind,source=/etc/hostname,destination=/tmp/host-hostname,readonly=true <image name>
 
 6. Start you HAProxy image 
 
