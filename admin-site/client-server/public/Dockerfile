@@ -1,5 +1,5 @@
 # Create image based on the official Node 6 image from dockerhub
-FROM node:6
+FROM hypriot/rpi-node
 
 # Create a directory where our app will be placed
 RUN mkdir -p /usr/src/app
