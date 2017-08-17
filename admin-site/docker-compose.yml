@@ -14,8 +14,8 @@ services:
       - "3000:3000" #specify ports forewarding
     links:
       - database
-    depends_on:
-      - database
+    #depends_on:
+    #  - database
 
   visualizer: # Visulalizer that shows swarm status
     image: dockersamples/visualizer:latest

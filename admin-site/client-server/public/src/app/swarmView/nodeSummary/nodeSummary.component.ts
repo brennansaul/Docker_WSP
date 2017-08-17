@@ -11,6 +11,7 @@
 */
 
 import { Component, Input, OnInit} from "@angular/core";
+import { Http } from '@angular/http';
 
 import { Container } from '../../shared/models/container'
 
@@ -21,6 +22,9 @@ import { Container } from '../../shared/models/container'
 })
 
 export class NodeSummaryComponent {
+
+    constructor(private http: Http) {}
+    API = 'http://localhost:3000'
 
   // Variable passed from SwarmViewComponent
   @Input() node: string;
@@ -33,7 +37,9 @@ export class NodeSummaryComponent {
 
   /****** Elements for Node summary Display *****/
   containerList :Container[]  = [];
-  // For Testing and Development
+  allContainers :Container[] = [];
+
+  /* For Testing and Development
   allContainers :Container[] = [
     { cid: "1111111111", views: 1, node: "pi-manager" },
     { cid: "2222222222", views: 3, node: "pi-worker1" },
@@ -56,6 +62,7 @@ export class NodeSummaryComponent {
     { cid: "1919191919", views: 6, node: "pi-worker2" },
     { cid: "2020202020", views: 3, node: "pi-worker3" },
   ]
+  */
 
 /*
 * ngOnChnages
@@ -74,13 +81,24 @@ ngOnChanges(changes) {
 *
 * Right now this function pulls initail list of container from hardcoded example
 */
-getAllContainers(): void {
+//getAllContainers(): void {
   // Call the API and store returned list of buttons in the array
     //this.buttonService.getAllButtons().subscribe(buttons => {
-        this.containerList = this.allContainers;
+//        this.containerList = this.allContainers;
         //this.containerList = containers
         //this.allContainers = containers
-        this.filterContainers();
+//        this.filterContainers();
+//}
+
+// Get all users from the API
+public getAllContainers() {
+  this.http.get(`${this.API}/containers`)
+    .map(res => res.json())
+    .subscribe(containers => {
+      console.log(containers)
+      this.allContainers = containers
+      this.filterContainers();
+    })
 }
 
 /*

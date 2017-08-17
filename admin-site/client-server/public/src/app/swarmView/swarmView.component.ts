@@ -30,8 +30,6 @@ export class SwarmViewComponent {
   // Link to our api, pointing to localhost
   API = 'http://localhost:3000'
 
-  // Declare empty list of people
-  containers: any[] = [];
 
   filteredContainer: any[] = [];
 
@@ -47,7 +45,9 @@ export class SwarmViewComponent {
     "pi-worker3",
   ]
 
+  containerList :Container[] = [];
   // For Testing and Development
+  /*
   containerList :Container[] = [
     { cid: "1111111111", views: 1, node: "pi-manager" },
     { cid: "2222222222", views: 3, node: "pi-worker1" },
@@ -70,7 +70,7 @@ export class SwarmViewComponent {
     { cid: "1919191919", views: 6, node: "pi-worker2" },
     { cid: "2020202020", views: 3, node: "pi-worker3" },
   ]
-
+  */
 
 
   /*Functions*/
@@ -92,15 +92,13 @@ export class SwarmViewComponent {
 	}
 
   // Add one Container to the API
-  /*
-  addContainer(name, age) {
+  public addContainer(cid, views, node) {
     this.http.post(`${this.API}/containers`, {cid, views, node})
       .map(res => res.json())
       .subscribe(() => {
         this.getAllContainers();
       })
   }
-  */
 
   // Get all users from the API
   public getAllContainers() {
@@ -108,7 +106,7 @@ export class SwarmViewComponent {
       .map(res => res.json())
       .subscribe(containers => {
         //console.log(containers)
-        this.containers = containers
+        this.containerList = containers
       })
   }
 
