@@ -4,12 +4,16 @@ version: '2' # specify docker-compose version
 # Define the services/containers to be run
 services:
   web: # name of the first service
-    build: client-server/public # specify the directory of the Dockerfile
+    build:
+      context: client-server/public # specify the directory of the Dockerfile
+      dockerfile: Dockerfile-pi
     ports:
       - "4200:4200" # specify port forewarding
 
   express: #name of the second service
-    build: client-server/server # specify the directory of the Dockerfile
+    build:
+      context: client-server/server # specify the directory of the Dockerfile
+      dockerfile: Dockerfile-pi
     ports:
       - "3000:3000" #specify ports forewarding
     links:
@@ -18,18 +22,18 @@ services:
       - database
 
   visualizer: # Visulalizer that shows swarm status
-    image: dockersamples/visualizer:latest
+    image: alexellis2/visualizer-arm:latest
     ports:
       - "5000:8080"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
 
   #haproxy:
-  #  image: brennansaul/flairhaproxy
+  #  image: brennansaul/pi-flair-haproxy
   #  ports:
   #    - "80:80"
 
   database: # name of the third service
-    image: mongo # specify image to build container from
+    image: dhermanns/rpi-mongo # specify image to build container from
     ports:
       - "27017:27017" # specify port forewarding
