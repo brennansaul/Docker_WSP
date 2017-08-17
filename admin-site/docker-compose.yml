@@ -1,17 +1,33 @@
+# Docker compose file that works with x86 processors
 version: '2' # specify docker-compose version
 
 # Define the services/containers to be run
 services:
   web: # name of the first service
-    build: client-server # specify the directory of the Dockerfile
+    build: client-server/public # specify the directory of the Dockerfile
     ports:
       - "4200:4200" # specify port forewarding
-      - "80:80"
+
+  express: #name of the second service
+    build: client-server/server # specify the directory of the Dockerfile
+    ports:
+      - "3000:3000" #specify ports forewarding
     links:
       - database
     depends_on:
       - database
-    command: ["./wait-for-it.sh", "database:27017", "--strict", "--", "./wait-for-mongo.sh"]
+
+  visualizer: # Visulalizer that shows swarm status
+    image: dockersamples/visualizer:latest
+    ports:
+      - "5000:8080"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  haproxy:
+    image: brennansaul/flairhaproxy
+    ports:
+      - "80:80"
 
   database: # name of the third service
     image: mongo # specify image to build container from

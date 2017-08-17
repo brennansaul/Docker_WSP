@@ -19,7 +19,7 @@ app.use('/', api);
 /**
  * Get port from environment and store in Express.
  */
-const port = process.env.PORT || '80';
+const port = process.env.PORT || '3000';
 app.set('port', port);
 
 /**
