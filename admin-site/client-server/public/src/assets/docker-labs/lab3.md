@@ -6,28 +6,31 @@ This lab will guide you through the processes of:
 ### Creating a Docker Image
 In order to build an image using Docker we use what is called a `Dockerfile`.
 A `Dockerfile` can be thought of as a recipe for a cake but instead of eggs, flour,
-and milk our recipe contains a base image, commands, and source code provided in the form of instructions.
-The first instruction that one uses is the `FROM`instruction, This tells Docker
+and milk our recipe contains a base image, commands, and source code all provided in the form of instructions.
+The first instruction that one uses is the `FROM` instruction. This instruction tells Docker
 what foundation we are building our image on. Choosing the best base image
-for your situation can save you a lot of work so that you do not have to reinvent
-the wheel. To find a base image that suits you're needs go to [Docker Hub](https://hub.docker.com/). There you will find both Organization and Community
-created images, create a profile and you will be able to contribute images you
-have created!.
+for your situation can save you a lot of work. You do not have to reinvent
+the wheel! To find a base image that suits your needs go to [Docker Hub](https://hub.docker.com/).
+There you will find both organization and community
+created images. Create a profile and you will be able to contribute the images
+you create!
 
 After the `FROM` instruction there are many commands that one
 may use to create their image:
 ##### `MAINTAINER` - Give yourself some credit.
 ##### `RUN` - Executes commands for the current image. Each run command creates a new layer to build on top of.
-##### `ENV` - Sets environment variable for the image.
-##### `COPY` - Copies files/directories from host <src> to image at path <destination>.
-##### `ADD`- Copies files/directories from host <src> to image at path <dest>.
+##### `ENV` - Sets environment variables for the image.
+##### `COPY` - Copies files and directories from host src to image at path dest.
+##### `ADD`- Copies files and directories from host src to image at path dest.
 ##### `WORKDIR` - Sets the working directory for any instruction.
 ##### `EXPOSE` - Tells the container to listen on the indicated port. This command does not make the port accessible to the host, that is done with the `-p port:port` option with  `docker run` at the command line.
 ##### `CMD` - Defines the default command executed when the container is run.
 ##### *NOTE: A comprehensive list of all Dockerfile instructions provided with descriptions and examples can be found using the [Dockerfile reference Documentation](https://docs.docker.com/engine/reference/builder/#from).*
 
 ### Writing a docker file
-One pattern commonly used in docker files is after initial `FROM` instruction followed by `ENV` instructions to define environment variables. Next One will used The Run instructions to update and upgrade currently installed packages, create directories, and install new packages or dependencies. Next one will copy over customized configuration files, and source code for the image using the `ADD` or `COPY` instruction. The two instructions behave similarly but have individual nuances. To wrap up the `Dockerfile` one will use 'Expose' to make the container listen on any ports needed, `WORKDIR` can be used to switch to a specific directory so that the last instruction `CMD` will be run correctly. *NOTE: This is just a basic method and will not apply to all situations!*
+A basic pattern commonly used in Dockerfiles is `FROM` - `ENV`- `RUN` - `COPY` - `EXPOSE` - `WORKDIR` - `CMD`. The `FROM` instruction is followed by `ENV` to define environment variables. Next the `RUN` instruction is used to: update and upgrade currently installed packages, create directories, and install new packages or dependencies. Next one will copy over customized configuration files, and source code for the image using the `ADD` or/and `COPY` instruction. The two instructions behave similarly but have their individual nuances. To wrap up the `Dockerfile` one will use `EXPOSE` to make the container listen on any ports needed, `WORKDIR` can be used to switch to a specific directory so that the last instruction `CMD` will be run correctly.
+
+*NOTE: This is just a basic method and will not apply to all situations!*
 
 ### Example: HAProxy image for Raspberry Pi
 ``` Dockerfile
@@ -42,14 +45,16 @@ One pattern commonly used in docker files is after initial `FROM` instruction fo
   # base image that is compatible. Key words that will help find these base
   # images on docker hub are rpi, arm32v7, and arm32.
   FROM arm32v7/haproxy
+
   MAINTAINER brennansaul jamessaul7629@gmail.com
 
   # Here we copy our configuration file for HAProxy
   COPY haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
 ```
-#### Done! In just three lines we have written a `Dockerfile` that we can use to build a docker image to be run as a container!
+### Done! In just **three** lines we have written a `Dockerfile` that we can use to build a docker image!
 
-*The haproxy.cfg file has been provided if you would like to see easy it is to configure an HAProxy load balancer:*
+*The haproxy.cfg file has been provided if you would like to see how easy it is
+to configure an HAProxy load balancer:*
 
 ```
 # *****************************************************************************
