@@ -51,5 +51,5 @@ familiar with both sources.
 
 ## References
 
-- [Swarm Visualizer](https://github.com/ManoMarks/docker-swarm-visualizer)
+- [Swarm Visualizer](https://github.com/ManoMarks/docker-swarm-visualizer): ManoMarks
 - ShellInABox: Markus Gutschke
