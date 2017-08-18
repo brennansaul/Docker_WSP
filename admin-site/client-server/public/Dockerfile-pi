@@ -2,7 +2,7 @@
 FROM hypriot/rpi-node
 
 # Create a directory where our app will be placed
-# RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/app
 
 # Change directory so that our commands run inside this new directory
 WORKDIR /usr/src/app
@@ -11,9 +11,9 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app
 
 #Install dependecies
-#RUN npm install -y && \
-#    npm install -y bootstrap && \
-#    npm install -y angular2-markdown
+RUN npm install -y && \
+    npm install -y bootstrap --save && \
+    npm install -y angular2-markdown --save
 
 
 # Get all the code needed to run the app
