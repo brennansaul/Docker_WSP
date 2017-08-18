@@ -28,17 +28,49 @@ it is grouped with. The word dockument is supposed to be comprehensive and also 
 used during development. There is overlap between the two groups but it is important that one becomes 
 familiar with both sources.
 
-### To Do
+## Use:
+
+### ARM 
+
+1. Set up your docker swarm 
+
+2. Clone this repository on the manager node
+
+3. Switch to the admin-site directory
+
+4. Grant privileges to pi-compose.sh: 
+``` bash
+$ chmod 777 pi-compose.sh
+```
+
+5. Execute script:
+``` bash
+$ ./pi-compose.sh
+```
+**Services will take a couple minutes to start**
+
+
+### x86 
+
+1. Set up your docker swarm 
+
+2. Clone this repository on the manager node
+
+3. Switch to the admin-site directory
+
+4. Run docker compose
+```
+$ docker-compose up 
+```
+
+## To Do
 - Assign static ip addresses to pis 
+  - change `haproxy.cfg`, `/ect/hosts`, `labview.component.html`, and `visualizer.component.html` to point to correct static addresses 
 - Update Container Database for when
   - Container created
   - Container destroyed 
   - Container relocated
   - Increment contianer views when visited 
-  
-
-
-
 <hr>
 
 ## Acknowledgments:
