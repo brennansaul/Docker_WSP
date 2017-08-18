@@ -113,7 +113,7 @@ $ cd <directory with files>
 $ docker build -t brennansaul/pi-flair-haproxy .
 
 # Test image
-$ docker run -it --rm --name haproxy-syntax-check pi-haproxy haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg
+$ docker run -it --rm --name haproxy-syntax-check brennansaul/pi-flair-haproxy haproxy -c -f /usr/local/etc/haproxy/haproxy.cfg
 ```
 
 ##### 3. Start HAProxy Load Balancer

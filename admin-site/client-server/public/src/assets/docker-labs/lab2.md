@@ -24,12 +24,12 @@ receives tasks from the managers and hosts services in containers. A `Manager no
 also works as a `Worker node`.
 
 The Manager and Worker nodes of a cluster provide the following benefits to your services:
-- load balancing
-- reliability
-- redundancy
-- simple scaling
-- rolling updates
-- secure communication between nodes
+- Load balancing
+- Reliability
+- Redundancy
+- Simple scaling
+- Rolling updates
+- Secure communication between nodes
 
 If you are having trouble understanding Swarm Mode take a couple of minutes
 to watch this video by Elton Stoneman, a Docker Captain.
@@ -76,9 +76,9 @@ Boom. Done. That easy.
 Swarm Commands For This Lab:
 ##### `$ docker --help` - Provides a comprehensive list of commands.
 ##### `$ docker node ls` - Lists the nodes in your swarm.
-##### `$ docker info` - Gives Current state of the swarm.
+##### `$ docker info` - Gives current state of the swarm.
 ##### `$ docker node ps <Host name>`- Lists services running on indicated node.
-##### `$ docker service create <options> <image>` - Creates a service from the indicated image
+##### `$ docker service create <options> <image>` - Creates a service from the indicated image.
 ##### `$ docker service ls` - List the services of the cluster.
 ##### `$ docker service ps <service>` - List nodes running the service.
 ##### `$ docker service inspect --pretty <service>` - Display details about the service.
