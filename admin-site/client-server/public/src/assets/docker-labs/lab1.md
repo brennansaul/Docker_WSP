@@ -1,3 +1,4 @@
+Terminal login: pi / dockerpi
 ### Lab 1: Getting Familiar with Docker
 
 This lab will introduce you to docker basics. You will:
@@ -50,6 +51,8 @@ The first thing we need to do is `pull` a docker image. A docker image is a
 snapshot of a container and is produced with the `build` command. Docker images
 are used to create docker containers when used with the `run` command.
 
+#### TERMINAL LOGIN: pi - dockerpi
+
 ##### 1. Pull our webpage image:
 
 ``` bash
@@ -74,7 +77,7 @@ $ docker run -d -p 2500:80 brennansaul/flairhello1
 - The `-p 2500:80` makes the container listen on port 2500 and maps port 2500 to port 80 in the container.
 
 
-##### 4. In a browser visit <ip address of the manager node>:2500 and you will see the web page.
+##### 4. In a browser visit (ip address of the manager node):2500 and you will see the web page.
 
 ### Thats all it takes to start running a container!
 Not easy enough? If the image we want to deploy is on DockerHub the run command will automatically pull the image if it is not found locally!
