@@ -12,8 +12,8 @@ COPY package.json /usr/src/app
 
 #Install dependecies
 #RUN npm install -y && \
-RUN   npm install -y bootstrap --save && \
-      npm install -y angular2-markdown --save
+RUN   npm install -y bootstrap && \
+      npm install -y angular2-markdown
 
 
 # Get all the code needed to run the app
