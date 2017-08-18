@@ -28,6 +28,17 @@ it is grouped with. The word dockument is supposed to be comprehensive and also 
 used during development. There is overlap between the two groups but it is important that one becomes 
 familiar with both sources.
 
+### To Do
+- Assign static ip addresses to pis 
+- Update Container Database for when
+  - Container created
+  - Container destroyed 
+  - Container relocated
+  - Increment contianer views when visited 
+  
+
+
+
 <hr>
 
 ## Acknowledgments:
@@ -37,3 +48,8 @@ familiar with both sources.
 - Robert H. Davis II - Software Architect 
 - Matt Hedges - Datacenter Architect 
 - Brennan Saul - Software Developer 
+
+## References
+
+- [Swarm Visualizer](https://github.com/ManoMarks/docker-swarm-visualizer)
+- ShellInABox: Markus Gutschke
