@@ -11,9 +11,9 @@ WORKDIR /usr/src/app
 COPY package.json /usr/src/app
 
 #Install dependecies
-RUN npm install -y && \
-    npm install -y bootstrap && \
-    npm install -y angular2-markdown 
+#RUN npm install -y && \
+RUN   npm install -y bootstrap --save && \
+      npm install -y angular2-markdown --save
 
 
 # Get all the code needed to run the app
