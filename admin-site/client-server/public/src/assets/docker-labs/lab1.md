@@ -7,6 +7,7 @@ This lab will introduce you to docker basics. You will:
 - Host a simple web page using docker.
 
 <hr>
+
 ### What is Docker?
 Docker is the world's leading software container platform that has a wide range
 of capabilities that benefit and appeal to Developers, System Administrators,
