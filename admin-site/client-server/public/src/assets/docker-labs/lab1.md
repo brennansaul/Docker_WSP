@@ -35,8 +35,10 @@ Benefits of Docker:
 - Multi-Cloud Platforms (AWS, VirtualBox, Google Compute Engine, Microsoft Azure...)
 
 <hr>
+
 ### Our first Docker Application
 Docker Commands For This Lab:
+
 ##### `$ docker --help` - Provides a comprehensive list of commands.
 ##### `$ docker pull <user>/<image>` - Pulls an image from Docker Hub.
 ##### `$ docker images`- Lists all the images on the host system.
@@ -124,7 +126,9 @@ $ docker rmi <image id>
 ### Done! Lets move on to Lab 2 to learn about clustering multiple docker engine hosts with Swarm Mode!
 
 <hr>
+
 ### References
+
 <hr>
 - [What is Docker](https://www.docker.com/what-docker)
 - [Getting Started](https://prakhar.me/docker-curriculum/)
