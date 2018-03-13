@@ -3,7 +3,7 @@ Terminal login: pi / dockerpi
 
 This lab will introduce you to docker basics. You will:
 - Learn what docker is, its capabilities and what benefits it provides.
-- Learn basic docker commands
+- Learn basic docker commands.
 - Host a simple web page using docker.
 
 <hr>
