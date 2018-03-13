@@ -130,6 +130,7 @@ $ docker rmi <image id>
 ### References
 
 <hr>
+
 - [What is Docker](https://www.docker.com/what-docker)
 - [Getting Started](https://prakhar.me/docker-curriculum/)
 - [5 Key Benefits of Docker: CI, Version Control, Portability, Isolation and Security](https://dzone.com/articles/5-key-benefits-docker-ci)
