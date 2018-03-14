@@ -154,7 +154,9 @@ services can be scaled as needed. In the next lab we will show you how to build
 a custom docker image and load balance with HAProxy.
 
 <hr>
+
 ### References
+
 <hr>
 [Get started with swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/)
 [Swarm mode overview](https://docs.docker.com/engine/swarm/)
