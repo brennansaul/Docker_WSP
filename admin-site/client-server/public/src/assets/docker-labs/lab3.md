@@ -126,9 +126,12 @@ $ docker run -d -p 80:80 brennansaul/pi-flair-haproxy
 Just like that we have deployed a network load balancer that can react to the scaling nature of docker swarm mode!
 
 <hr>
+
 ### References
+
 <hr>
-[Docker Documentation](https://docs.docker.com/engine/reference/builder/)
+
+- [Docker Documentation](https://docs.docker.com/engine/reference/builder/)
 - [ HAProxy Configuration Manual ](https://cbonte.github.io/haproxy-dconv/1.8/configuration.html#daemon)
 - [How To Use HAProxy to Set Up HTTP Load Balancing on an Ubuntu VPS](https://www.digitalocean.com/community/tutorials/how-to-use-haproxy-to-set-up-http-load-balancing-on-an-ubuntu-vps#testing-load-balancing-and-failover)
 - [bhameyie/haproxy.cfg](https://gist.github.com/bhameyie/07c1ee9aaa3e8a200c8c)
