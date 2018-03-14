@@ -19,7 +19,7 @@ primary roles:
 - Maintainer - The manager monitors the status of all nodes and services
 
 If a service or node is down the manager will delegate services and load balance
-accordingly.The second type of Node in a swarm is a `Worker node`. A worker node
+accordingly. The second type of Node in a swarm is a `Worker node`. A worker node
 receives tasks from the managers and hosts services in containers. A `Manager node`
 also works as a `Worker node`.
 
