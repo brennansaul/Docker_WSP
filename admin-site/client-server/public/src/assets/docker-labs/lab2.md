@@ -158,6 +158,7 @@ a custom docker image and load balance with HAProxy.
 ### References
 
 <hr>
+
 [Get started with swarm mode](https://docs.docker.com/engine/swarm/swarm-tutorial/)
 [Swarm mode overview](https://docs.docker.com/engine/swarm/)
 [Swarm Mode Key Concepts](https://docs.docker.com/engine/swarm/key-concepts/)
